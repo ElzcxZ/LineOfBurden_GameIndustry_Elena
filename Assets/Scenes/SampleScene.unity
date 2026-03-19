@@ -537,6 +537,7 @@ GameObject:
   - component: {fileID: 1878489539}
   - component: {fileID: 1878489538}
   - component: {fileID: 1878489537}
+  - component: {fileID: 1878489541}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -638,6 +639,25 @@ Transform:
   - {fileID: 1480312245}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1878489541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1878489536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5be8db62230a642b3a34d9abdf090a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  movementSpeed: 5.5
+  currentLane: 0
+  maxLane: 2
+  laneDistance: 3
+  laneSwitchSpeed: 1.5
+  isMoving: 0
+  weight: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
