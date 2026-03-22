@@ -17,6 +17,11 @@ public class Cart : MonoBehaviour
     public float cooldown = 3f;
     public float lastResetTime = 0f;
 
+    public void AddWeight(float amount)
+    {
+        weight += amount;
+    }
+
     void GameOver()
     {
         isGameOver = true;
