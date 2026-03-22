@@ -6,6 +6,8 @@ public class Cart : MonoBehaviour
     public float movementSpeed = 5.5f;
     
     private bool isMoving = false;
+    private bool isGameOver = false;
+    public GameObject GameOverUI;
     
     public float weight = 1f; // 1 = normal weight, 2 = double weight, (minimum 1)
     private float minWeight = 1f;
@@ -15,6 +17,13 @@ public class Cart : MonoBehaviour
     public float cooldown = 3f;
     public float lastResetTime = 0f;
 
+    void GameOver()
+    {
+        isGameOver = true;
+        movementSpeed = 0f;
+        isMoving = false;
+        GameOverUI.SetActive(true);
+    }
     void Update()
     {
         // player constant movement 
