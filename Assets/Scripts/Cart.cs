@@ -7,7 +7,7 @@ public class Cart : MonoBehaviour
     
     private bool isMoving = false;
     private bool isGameOver = false;
-    public GameObject GameOverUI;
+    public GameObject gameOverUI;
     
     public float weight = 1f; // 1 = normal weight, 2 = double weight, (minimum 1)
     private float minWeight = 1f;
@@ -22,10 +22,15 @@ public class Cart : MonoBehaviour
         isGameOver = true;
         movementSpeed = 0f;
         isMoving = false;
-        GameOverUI.SetActive(true);
+        gameOverUI.SetActive(true);
     }
     void Update()
     {
+        if (weight >= maxWeight && !isGameOver)
+        {
+            GameOver();
+        }
+        
         // player constant movement 
         if (Keyboard.current.wKey.wasPressedThisFrame)
         {
