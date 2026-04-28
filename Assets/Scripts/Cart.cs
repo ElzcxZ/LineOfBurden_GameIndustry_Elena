@@ -9,7 +9,7 @@ public class Cart : MonoBehaviour
     private bool isGameOver = false;
     public GameObject gameOverUI;
 
-    public static float winDistance = 50f;
+    public static int winDistance = 100; //
     private float startZ;
     public static bool hasWon = false;
     
@@ -40,8 +40,6 @@ public class Cart : MonoBehaviour
         
         movementSpeed = 0f;
         isMoving = false;
-        
-        Debug.Log("you win!!");
     }
 
     void Start()
