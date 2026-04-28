@@ -8,6 +8,10 @@ public class Cart : MonoBehaviour
     private bool isMoving = false;
     private bool isGameOver = false;
     public GameObject gameOverUI;
+
+    public static float winDistance = 50f;
+    private float startZ;
+    public static bool hasWon = false;
     
     public float weight = 1f; // 1 = normal weight, 2 = double weight, (minimum 1)
     private float minWeight = 1f;
@@ -29,9 +33,32 @@ public class Cart : MonoBehaviour
         isMoving = false;
         gameOverUI.SetActive(true);
     }
+
+    void Win()
+    {
+        hasWon = true;
+        
+        movementSpeed = 0f;
+        isMoving = false;
+        
+        Debug.Log("you win!!");
+    }
+
+    void Start()
+    {
+        startZ = transform.position.z; //captures starting position
+    }
+    
     void Update()
     {
-        if (weight >= maxWeight && !isGameOver)
+        float distanceTraveled = transform.position.z - startZ; //find the distance traveled
+
+        if (!hasWon && !isGameOver && distanceTraveled >= winDistance) //if haven't won yet, haven't lost, and reached the finish line, you win
+        {
+            Win();
+        }
+        
+        if (weight >= maxWeight && !isGameOver && !hasWon)
         {
             GameOver();
         }

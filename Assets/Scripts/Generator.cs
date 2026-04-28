@@ -5,8 +5,10 @@ public class Generator : MonoBehaviour
 {
     public GameObject itemToSpawn;
     public Transform[] lanes;
+    float winDistance = Cart.winDistance;
     public float distance = 5f;
     public int iterations = 100;
+    
 
     private void Start()
     {
