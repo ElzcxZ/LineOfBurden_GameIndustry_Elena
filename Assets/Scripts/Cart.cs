@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class Cart : MonoBehaviour
 {
@@ -31,7 +32,7 @@ public class Cart : MonoBehaviour
         isGameOver = true;
         movementSpeed = 0f;
         isMoving = false;
-        gameOverUI.SetActive(true);
+        SceneManager.LoadScene("GameOver");
     }
 
     void Win()
