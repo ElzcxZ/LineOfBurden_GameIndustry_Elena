@@ -10,7 +10,7 @@ public class Cart : MonoBehaviour
     private bool isGameOver = false;
     public GameObject gameOverUI;
 
-    public static int winDistance = 100; //
+    public static int winDistance = 120;
     private float startZ;
     public static bool hasWon = false;
     
@@ -41,6 +41,7 @@ public class Cart : MonoBehaviour
         
         movementSpeed = 0f;
         isMoving = false;
+        SceneManager.LoadScene("GameWon");
     }
 
     void Start()

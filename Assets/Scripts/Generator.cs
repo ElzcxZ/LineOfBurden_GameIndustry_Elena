@@ -7,7 +7,7 @@ public class Generator : MonoBehaviour
     public Transform[] lanes;
     private int winDistance = Cart.winDistance;
     public int distance = 5;
-    public int obstacleCutoff = 1; //amount of obstacles to stop generating before the winDistance
+    public int obstacleCutoff = 5; //amount of obstacles to stop generating before the winDistance
     
 
     private void Start()

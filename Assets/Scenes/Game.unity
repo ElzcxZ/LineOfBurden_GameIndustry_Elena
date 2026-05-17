@@ -1077,7 +1077,7 @@ MonoBehaviour:
   - {fileID: 411735698}
   - {fileID: 982236876}
   distance: 5
-  obstacleCutoff: 1
+  obstacleCutoff: 4
 --- !u!4 &959701330
 Transform:
   m_ObjectHideFlags: 0
@@ -1700,7 +1700,7 @@ MonoBehaviour:
   - {fileID: 120234350}
   - {fileID: 295832712}
   distance: 5
-  obstacleCutoff: 1
+  obstacleCutoff: 4
 --- !u!4 &1918651257
 Transform:
   m_ObjectHideFlags: 0
