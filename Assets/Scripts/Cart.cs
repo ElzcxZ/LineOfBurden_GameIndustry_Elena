@@ -8,7 +8,6 @@ public class Cart : MonoBehaviour
     
     private bool isMoving = false;
     private bool isGameOver = false;
-    public GameObject gameOverUI;
 
     public static int winDistance = 120;
     private float startZ;
@@ -47,6 +46,7 @@ public class Cart : MonoBehaviour
     void Start()
     {
         startZ = transform.position.z; //captures starting position
+        hasWon = false;
     }
     
     void Update()
