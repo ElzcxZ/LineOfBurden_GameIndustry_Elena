@@ -17,7 +17,6 @@ public class LaneChanger : MonoBehaviour
         // if "A" is pressed, switch to the next left lane
         if (Keyboard.current.aKey.wasPressedThisFrame && !hasWon)
         {
-            Debug.Log("pressed");
             currentLane =
                 Mathf.Max(currentLane - 1, 0); // "Mathf.Clamp" locks the first value between the 2nd value and the 3rd value
         }
