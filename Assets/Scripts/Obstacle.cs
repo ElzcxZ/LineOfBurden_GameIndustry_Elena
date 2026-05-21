@@ -4,17 +4,23 @@ using UnityEngine;
 public class Obstacle : MonoBehaviour
 {
     public float weightIncrease = 0.5f;
+    private Cart cart;
+
+    void Start()
+    {
+        cart = GameObject.Find("Cart").GetComponent<Cart>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Cart player = other.GetComponentInParent<Cart>();
-            if (player != null)
+            if (cart != null)
             {
-                player.AddWeight(weightIncrease);
+                cart.AddWeight(weightIncrease);
                 Destroy(gameObject);
             }
         }
     }
 }
+

@@ -125,4 +125,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bd0acfb9876bf428320a335c2b6898, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Obstacle
-  weightIncrease: 0.5
+  weightIncrease: 100
