@@ -16,7 +16,7 @@ public class Cart : MonoBehaviour
     public float weight = 1f; // 1 = normal weight, 2 = double weight, (minimum 1)
     private float minWeight = 1f;
     public float maxWeight = 3f;
-    public float weightIncreaseSpeed = 0.05f;
+    public float weightIncreaseSpeed = 0.08f;
 
     public float cooldown = 3f;
     public float lastResetTime = 0f;
